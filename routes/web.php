@@ -60,3 +60,6 @@ Route::get('compra/{compra}', [CompraController::class,'show']);
 Route::get('venta', [VentaController::class,'index'] );
 Route::get('venta/create', [VentaController::class,'create']);
 Route::get('venta/{venta}', [VentaController::class,'show']);
+Route::middleware(['auth:sanctum', 'verified'])->get('/dashboard', function () {
+    return view('dashboard');
+})->name('dashboard');
