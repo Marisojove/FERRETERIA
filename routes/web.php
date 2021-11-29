@@ -27,9 +27,12 @@ use App\Http\Controllers\VentaController; //Venta
 
 Route::get('/', HomeController::class);
 //cliente
-Route::get('cliente', [ClienteController::class,'index'] );
-Route::get('cliente/create', [ClienteController::class,'create']);
-Route::get('cliente/{cliente}', [ClienteController::class,'show']);
+Route::get('clientes', [ClienteController::class,'index'] )->name('clientes.index');
+Route::get('clientes/create', [ClienteController::class,'create'])->name('clientes.create');
+Route::post('clientes', [ClienteController::class,'store'])->name('clientes.store');
+Route::get('clientes/{cliente}', [ClienteController::class,'show'])->name('clientes.show');
+Route::get('clientes/{cliente}/edit', [ClienteController::class,'edit'])->name('clientes.edit');
+Route::put('clientes/{cliente}', [ClienteController::class,'store'])->name('clientes.update');
 
 //marca
 Route::get('marca', [marcaController::class,'index'] );
