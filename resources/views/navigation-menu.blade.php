@@ -15,29 +15,49 @@
                     <x-jet-nav-link href="{{ route('dashboard') }}" :active="request()->routeIs('dashboard')">
                         {{ __('Dashboard') }}
                     </x-jet-nav-link>
-                    <x-jet-nav-link href="{{ route('clientes.index') }}" :active="request()->routeIs('clientes.*')">
-                        Clientes
-                    </x-jet-nav-link>
-                    <x-jet-nav-link href="{{ route('marca.index') }}" :active="request()->routeIs('marca.*')">
-                        marca
-                    </x-jet-nav-link>
-                    <x-jet-nav-link href="{{ route('proveedor.index') }}" :active="request()->routeIs('proveedor.*')">
-                        Proveedor
-                    </x-jet-nav-link>
-                    <x-jet-nav-link href="{{ route('empleado.index') }}" :active="request()->routeIs('empleado.*')">
-                        Empleado
-                    </x-jet-nav-link>
-                    <x-jet-nav-link href="{{ route('producto.index') }}" :active="request()->routeIs('producto.*')">
-                        producto
-                    </x-jet-nav-link>
-                    <x-jet-nav-link href="{{ route('compra.index') }}" :active="request()->routeIs('compra.*')">
-                        compra
-                    </x-jet-nav-link>
-                    <x-jet-nav-link href="{{ route('venta.index') }}" :active="request()->routeIs('venta.*')">
-                        Venta
+                </div>
+
+                <div class="hidden space-x-8 sm:-my-px sm:ml-10 sm:flex">
+                    <x-jet-nav-link href="{{ route('cliente.index') }}" :active="request()
+                    ->routeIs('cliente.*')">
+                        {{ __('cliente') }}
                     </x-jet-nav-link>
                 </div>
+
+                <div class="hidden space-x-8 sm:-my-px sm:ml-10 sm:flex">
+                    <x-jet-nav-link href="{{ route('marca.index') }}" :active="request()->routeIs('marca.*')">
+                        {{ __('marca') }}
+                    </x-jet-nav-link>
+                </div>
+                <div class="hidden space-x-8 sm:-my-px sm:ml-10 sm:flex">
+                    <x-jet-nav-link href="{{ route('proveedor.index') }}" :active="request()->routeIs('proveedor.*')">
+                        {{ __('proveedor') }}
+                    </x-jet-nav-link>
+                </div>
+                <div class="hidden space-x-8 sm:-my-px sm:ml-10 sm:flex">
+                    <x-jet-nav-link href="{{ route('empleado.index') }}" :active="request()->routeIs('empleado.*')">
+                        {{ __('empleado') }}
+                    </x-jet-nav-link>
+                </div>
+                <div class="hidden space-x-8 sm:-my-px sm:ml-10 sm:flex">
+                    <x-jet-nav-link href="{{ route('producto.index') }}" :active="request()->routeIs('producto.*')">
+                        {{ __('producto') }}
+                    </x-jet-nav-link>
+                </div>
+                <div class="hidden space-x-8 sm:-my-px sm:ml-10 sm:flex">
+                    <x-jet-nav-link href="{{ route('compra.index') }}" :active="request()->routeIs('compra.*')">
+                        {{ __('compra') }}
+                    </x-jet-nav-link>
+                </div>
+                <div class="hidden space-x-8 sm:-my-px sm:ml-10 sm:flex">
+                    <x-jet-nav-link href="{{ route('venta.index') }}" :active="request()->routeIs('venta.*')">
+                        {{ __('venta') }}
+                    </x-jet-nav-link>
+                </div>
+               
+
             </div>
+
 
             <div class="hidden sm:flex sm:items-center sm:ml-6">
                 <!-- Teams Dropdown -->

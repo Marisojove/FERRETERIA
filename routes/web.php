@@ -9,7 +9,7 @@ use App\Http\Controllers\EmpleadoController; //Empleado
 use App\Http\Controllers\ProductoController; //Producto
 use App\Http\Controllers\CompraController; //Compra
 use App\Http\Controllers\VentaController; //Venta
-
+use App\Http\Controllers\TiendaController; //tienda
 
 
 
@@ -25,18 +25,17 @@ use App\Http\Controllers\VentaController; //Venta
 |
 */
 
-Route::get('/', HomeController::class);
+//Route::get('/', HomeController::class);
 Route::get('/', function () {
     return view('welcome');
 });
-Route::middleware(['auth:sanctum', 'verified'])->get('/dashboard', function () {
-    return view('dashboard');
-})->name('dashboard');
-Route::middleware(['auth:sanctum', 'verified'])->get('/dashboard', TiendaController::class)->name('dashboard');
-Route::resource('tiendas', TiendaController::class);
-Route::get('tiendas/{producto}', [TiendaController::class, 'crearPedido'])->name('tiendas.crearPedido');
+Route::middleware(['auth:sanctum', 'verified'])->get('/dashboard',  function(){return view('dashboard');})->name('dashboard');
+//Route::resource('tiendas', TiendaController::class);
+//Route::get('tiendas/{producto}', [TiendaController::class, 'crearPedido'])->name('tiendas.crearPedido');
+
 //cliente
 Route::resource('cliente',ClienteController::class);
+
 //marca
 Route::resource('marca',MarcaController::class);
 

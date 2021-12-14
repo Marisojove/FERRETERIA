@@ -1,14 +1,11 @@
 <?php
 
 namespace App\Http\Controllers;
-
-use App\Models\Categoria;
+use App\Models\Empleado;
 use App\Models\Producto;
 use App\Models\Venta;
-use Carbon\Carbon;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
- use Illuminate\Support\Facades\Date;
 
 class TiendaController extends Controller
 {
@@ -26,9 +23,9 @@ class TiendaController extends Controller
     public function index()
     {
         $productos = Producto::all();
-        $categorias = Categoria::all();
+        $empleado = Empleado::all();
 
-        return view('tiendas._index', compact('productos', 'categorias'));
+        return view('tiendas._index', compact('productos', 'empleado'));
     }
 
     /**
@@ -64,9 +61,9 @@ class TiendaController extends Controller
         $venta->save();
 
         $productos = Producto::all();
-        $categorias = Categoria::all();
+        $empleado = Empleado::all();
 
-        return view('tiendas._index', compact('productos', 'categorias'))->with('success', 'Se ha procesado tu pedido');
+        return view('tiendas._index', compact('productos', 'empleado'))->with('success', 'Se ha procesado tu pedido');
 
 
     }

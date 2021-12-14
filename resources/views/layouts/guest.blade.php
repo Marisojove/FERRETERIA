@@ -14,7 +14,20 @@
         <link rel="stylesheet" href="{{ mix('css/app.css') }}">
        <!-- <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">-->
         <!-- Scripts -->
+
         <script src="{{ mix('js/app.js') }}" defer></script>
+
+        <script src="https://www.google.com/recaptcha/api.js"></script>
+        
+        <script>
+            function onSubmit(token) {
+              document.getElementById("demo-form").submit();
+            }
+          </script>
+
+
+
+
     </head>
     <body>
         <div class="font-sans text-gray-900 antialiased">

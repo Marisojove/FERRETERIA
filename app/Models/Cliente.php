@@ -10,4 +10,6 @@ class Cliente extends Model
 
     use HasFactory;
     protected $fillable = ['nombre', 'apellido', 'cedula'];
+
+    protected $primaryKey = 'idcliente';
 }
